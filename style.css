@@ -1,0 +1,144 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 550px;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*align-items: center; */
+  background-image: url("assets/movie-header.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.movie-find {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  /* gap: 2rem; */
+  color: #ffffff;
+}
+
+.movie-find > p > a {
+  color: #ffffff;
+}
+
+.movie-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -8%;
+  left: 0;
+  right: 0;
+}
+.movie-search > input {
+  width: 300px;
+  /* border-radius: 5px; */
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+.movie-search > button {
+  width: 120px;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: #4b4b4b;
+  color: #ffffff;
+}
+
+.movie-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+}
+
+.movie-poster {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  /* justify-content: space-around; */
+  /* align-items: center; */
+  gap: 2rem;
+  border-bottom: 2px solid #4b4b4b;
+}
+
+.movie-img > img {
+  width: 100px;
+  /* height: 300px; */
+  /* border-radius: 10px; */
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.fa-star {
+  color: #fec654;
+  margin-right: 0.5rem;
+}
+
+.movie-info-name {
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  gap: 1rem;
+  color: #ffffff;
+}
+.movie-info-name > h2 {
+  margin: 0;
+}
+.movie-info-details {
+  display: flex;
+  /* justify-content: space-evenly; */
+  align-items: left;
+  color: #ffffff;
+  margin: 0;
+}
+
+.fa-circle-plus {
+  color: #ffffff;
+  margin-right: 0.5rem;
+}
+
+.movie-info-details > p {
+  margin: 0;
+}
+
+.movie-info-details > p:nth-child(2),
+.movie-info-details > p:last-child {
+  margin-left: 1rem;
+}
+
+.movie-info-description {
+  color: #a5a5a5;
+}
+
+.movie-info-description > p {
+  margin: 0 0 1rem 0;
+}
+
+footer {
+  text-align: center;
+}
