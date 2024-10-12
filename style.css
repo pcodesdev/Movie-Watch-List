@@ -4,6 +4,37 @@ body {
   padding: 0;
 }
 
+/* toggle button styles */
+.toggle-btn {
+  font-size: 1.2em;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  margin-left: auto;
+}
+.toggle-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: left 0.3s ease-in-out;
+}
+.toggle-text {
+  position: relative;
+  z-index: 1;
+}
+
 .container {
   width: 550px;
   /* height: 100vh; */
@@ -12,6 +43,9 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 header {
@@ -36,8 +70,21 @@ header {
   color: #ffffff;
 }
 
+.movie-find > h1 {
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+.movie-find > p {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
 .movie-find > p > a {
   color: #ffffff;
+  background-color: #4b4b4b;
+  padding: 0.5rem;
+  /* font-weight: 700; */
 }
 
 .movie-search {
@@ -52,7 +99,7 @@ header {
 .movie-search > input {
   width: 300px;
   /* border-radius: 5px; */
-  border: none;
+  /* border: none; */
   padding: 0.5rem;
   font-size: 1rem;
 }
@@ -70,7 +117,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #121212;
+  /* background-color: #121212; */
 }
 
 .movie-poster {
@@ -104,7 +151,7 @@ header {
   /* justify-content: space-around; */
   align-items: center;
   gap: 1rem;
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 .movie-info-name > h2 {
   margin: 0;
@@ -113,8 +160,21 @@ header {
   display: flex;
   /* justify-content: space-evenly; */
   align-items: left;
-  color: #ffffff;
+  flex-wrap: wrap;
+  /* color: #ffffff; */
   margin: 0;
+}
+
+.watchlist,
+.remove-from-watchlist {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.circle-plus,
+.circle-remove {
+  width: 1rem;
+  margin-right: 0.5rem;
 }
 
 .fa-circle-plus {
@@ -132,7 +192,7 @@ header {
 }
 
 .movie-info-description {
-  color: #a5a5a5;
+  color: #797979;
 }
 
 .movie-info-description > p {
@@ -141,4 +201,37 @@ header {
 
 footer {
   text-align: center;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 96%;
+  }
+
+  .movie-search {
+    padding: 0.5rem;
+  }
+
+  .movie-poster {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 2rem;
+    gap: 1rem;
+  }
+
+  .movie-img {
+    width: 100%;
+    margin: 1rem;
+  }
+
+  .movie-img > img {
+    width: 100%;
+  }
+
+  .movie-find > h1 {
+    font-size: 1.5rem;
+  }
 }
