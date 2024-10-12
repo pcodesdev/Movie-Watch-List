@@ -42,7 +42,7 @@ movieSearchBtn.addEventListener("click", () => {
         return;
     }
 
-    fetch(`http://www.omdbapi.com/?apikey=70c9435d&s=${movieName}`)
+    fetch(`https://www.omdbapi.com/?apikey=70c9435d&s=${movieName}`)
         .then((res) => res.json())
         .then((data) => {
             if (data.Response === "False") {
@@ -62,7 +62,7 @@ function displayMovieList(movies) {
     movieContent.innerHTML = '';
 
     movies.forEach(movie => {
-        fetch(`http://www.omdbapi.com/?apikey=70c9435d&i=${movie.imdbID}`)
+        fetch(`https://www.omdbapi.com/?apikey=70c9435d&i=${movie.imdbID}`)
             .then((res) => res.json())
             .then((data) => {
                 const movieElement = createMovieElement(data);
